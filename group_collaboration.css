@@ -1,0 +1,224 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Comic Sans MS', cursive;
+  color: #000;
+}
+
+/* heading */
+h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #b21f1f;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+/* roommate section */
+.roommate-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.roommate-photo {
+  width: 110px;
+  height: 110px;
+  border: 2.5px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.roommate-photo:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.05);
+}
+
+.roommate-name {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* saved listings */
+.saved-listings {
+  flex: 1;
+  border: 2.5px solid #000;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px 15px;
+  min-height: 160px;
+}
+
+.saved-listings h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ✅ new container for horizontal layout */
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* card listings */
+.saved-listings .card {
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.2s ease;
+  width: 9rem;
+}
+
+.saved-listings .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.saved-listings .card-img-top {
+  height: 100px;
+  object-fit: cover;
+}
+
+.saved-listings .card-body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* calendar/viewings */
+.calendar-box {
+  border: 2.5px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.calendar-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.viewing-box {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.rsvp-btns {
+  margin-top: 5px;
+}
+
+.rsvp-btns i {
+  font-size: 22px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.rsvp-btns i.text-success:hover,
+.rsvp-btns i.text-danger:hover {
+  transform: scale(1.25);
+}
+
+/* chat section */
+.chat-box {
+  border: 2.5px solid #000;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px 15px;
+  min-height: 160px;
+}
+
+.chat-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.chat-box p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* appointed color themes for easy usage */
+.text-primary {
+  color: #0096FF !important;
+}
+
+.text-purple {
+  color: #A020F0 !important;
+}
+
+.text-info {
+  color: #007b83 !important;
+}
+
+.text-red {
+  color: #d64242 !important
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 70px; /* positions the dropdown BELOW the profile icon */
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px 0;
+  width: 220px;
+  z-index: 1000;
+}
+
+.profile-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.profile-menu a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Show class toggled by JS */
+.profile-menu.show {
+  display: block;
+}
+  

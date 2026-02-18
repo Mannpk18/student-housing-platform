@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Student House Hunters - Sign In Page </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body class="login-page">
+
+
+        <header class="header">
+            <a class="header-brand" href="#">Student House Hunters</a>
+
+            <!-- Hidden navigation for login page -->
+            <div class="header-nav-left" style="display: none;">
+                <a class="nav-item nav-link nav-icon active" href="listings.html" 
+                   style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px;">
+                    <i class="bi bi-house-fill" style="font-size: 2rem"></i>
+                    View Listings <span class="visually-hidden">(current)</span>
+                </a>
+
+                <a class="nav-item nav-link nav-icon" href="group_collaboration.html" 
+                   style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px;">
+                    <i class="bi bi-people-fill" style="font-size: 2rem"></i>
+                    <span>My Roommates</span>
+                </a>
+            </div>
+
+            <!-- Hidden profile icon on login page -->
+            <div class="header-nav-right" style="display: none;">
+                <a class="nav-item nav-link" href="#">
+                    <i class="bi bi-person-circle" style="font-size: 3rem"></i>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-container">
+                <h1 class="login-title">Welcome  </h1>
+                <p class="login-subtitle">Sign in to see available listings</p>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+            </div>
+        </main>
+
+        <footer></footer>
+
+    </body>
+</html>

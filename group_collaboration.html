@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student House Hunters - My Roommates</title>
+
+  <!-- Referenced external styles to this html -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="group_collaboration.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header class="header">
+            <a class="header-brand" href="#">Student House Hunters</a>
+            <div class="header-nav-left">
+                <!-- View Listings Icon-->
+                <a class="nav-item nav-link nav-icon active" href="listings.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px;">
+                    <i class="bi bi-house-fill" style="font-size: 2rem"></i>
+                    View Listings <span class="visually-hidden">(current)</span>
+                </a>
+
+                <!-- My Roommates Icon-->
+                <a class="nav-item nav-link nav-icon" href="group_collaboration.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px;">
+                    <i class="bi bi-people-fill" style="font-size: 2rem"></i>
+                    <span>My Roommates</span>
+                </a>
+            </div>
+            <!-- Profile icon on the right-->
+            <div class="header-nav-right">
+              <div class="profile-container">
+                  <a class="nav-item nav-link" id="profileIcon" href="javascript:void(0);">
+                      <i class="bi bi-person-circle" style="font-size: 3rem; cursor: pointer;"></i>
+                  </a>
+          
+                  <!-- Dropdown menu -->
+                  <div class="profile-menu" id="profileMenu">
+                    <a href="#">
+                        <i class="bi bi-person-fill"></i> My Profile
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-gear-fill"></i> Settings
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-question-circle-fill"></i> Help
+                    </a>
+                    <a href="javascript:void(0);" id="logoutBtn">
+                      <i class="bi bi-box-arrow-right"></i> Logout
+                  </a>
+                </div>
+                
+              </div>
+          </div>
+          
+        </header>
+
+  <main class="container mt-4">
+    <h3 class="text-center mb-4">My Roommates</h3>
+
+    <div class="row">
+      <!-- Roommates and saved listings -->
+      <div class="col-md-8">
+
+        <div class="roommate-card">
+          <div>
+            <div class="roommate-photo"><i class="bi bi-person-plus"></i></div>
+            <div class="roommate-name text-red mt-2">Bob Joe</div>
+          </div>
+          <div class="saved-listings">
+            <h2>Saved Listings</h2>
+            <div class="listing-container">
+              <div class="card">
+                <a href="listing_details.html?id=2" class="text-decoration-none text-dark">
+                    <img src="https://cache14.housesigma.com/file/pix-itso/160807792/073a2_1.jpg?dbec68b1" 
+                         class="card-img-top" 
+                         alt="314 Emerson St">
+              
+                    <div class="card-body p-2">
+                      <p class="card-text small">314 Emerson St<br>$740/mo</p>
+                    </div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="roommate-card">
+          <div>
+            <div class="roommate-photo"><i class="bi bi-person-plus"></i></div>
+            <div class="roommate-name text-red">Sandra Chen</div>
+          </div>
+          <div class="saved-listings">
+            <h2>Saved Listings</h2>
+            <div class="listing-container">
+              <div class="card">
+                <a href="listing_details.html?id=1" class="text-decoration-none text-dark">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-w-wqs511uXpCwnqhG94o9XVJvKrDZQOX4Q&s"
+                         class="card-img-top"
+                         alt="517 Dalewood Ave">
+              
+                    <div class="card-body p-2">
+                      <p class="card-text small">517 Dalewood Ave<br>$720/mo</p>
+                    </div>
+                </a>
+              </div>
+            
+              <div class="card">
+                <a href="listing_details.html?id=5" class="text-decoration-none text-dark">
+                    <img src="https://photos.zillowstatic.com/fp/5f8a829ab3f0e69ba4596ffb5e9ff859-cc_ft_960.jpg"
+                         class="card-img-top"
+                         alt="36 Main St E">
+              
+                    <div class="card-body p-2">
+                      <p class="card-text small">36 Main St E<br>$810/mo</p>
+                    </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roommate-card">
+          <div>
+            <div class="roommate-photo"><i class="bi bi-person-plus"></i></div>
+            <div class="roommate-name text-red">Brad Smith</div>
+          </div>
+          <div class="saved-listings">
+            <h2>Saved Listings</h2>
+            <div class="listing-container">
+              <div class="card">
+                <a href="listing_details.html?id=3" class="text-decoration-none text-dark">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQYLFwgtnsUtRwlKpDI9wTA51RprZugND0wA&s"
+                         class="card-img-top"
+                         alt="147 Broadway">
+              
+                    <div class="card-body p-2">
+                      <p class="card-text small">147 Broadway St<br>$800/mo</p>
+                    </div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming viewings + chat -->
+      <div class="col-md-4">
+        <div class="calendar-box mb-4">
+          <h2>Upcoming Viewings</h2>
+          <div class="viewing-box mt-3">
+            <strong>October 11:</strong> 314 Emerson St
+            <div class="rsvp-btns mt-2">
+              <span class="me-2 text-red fw-bold">Bob</span><i class="bi bi-check-circle-fill text-success"></i>
+              <span class="me-2 text-red fw-bold">Sandra</span><i class="bi bi-x-circle-fill text-danger"></i>
+              <span class="me-2 text-red fw-bold">Brad</span><i class="bi bi-check-circle-fill text-success"></i>
+            </div>
+            <hr>
+            <p><strong>Meet Your Landlord:</strong> Timothy<br>
+              <small>Location: Ancaster • Lives in Hamilton • Occupation: Retired</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="chat-box">
+          <h2>Chat</h2>
+          <p><strong class="text-red">Brad:</strong> Really like this place!</p>
+          <p><strong class="text-red">Sandra:</strong> I'll try my best to make it.</p>
+          <p><strong class="text-red">Bob:</strong> Excited to see the house!!</p>
+          <p><strong class="text-red">Sandra:</strong> How are we going?</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="group_collaboration.js"></script>
+</body>
+</html>

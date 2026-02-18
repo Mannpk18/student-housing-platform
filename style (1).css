@@ -1,0 +1,653 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/*Header bar on all pages*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+    padding: 25px 20px;
+    background-color: #f8f9fa;
+}
+
+.header-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-decoration: none;
+    color: #d64242;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.header-nav-left, .header-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    /* remove margin-left/right auto */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.page-container {
+    display: flex;      /* aligns filterbox and listings box side-by-side */
+    gap: 20px;          /* space between filter box and listings */
+    align-items: flex-start;  /* align items to the top of page*/
+    padding: 20px;
+}
+
+/*filter box*/
+.filter-box {
+    flex: 0 0 320px;  /* place filter box on the left side of page*/
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    position: sticky;
+    height: fit-content;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    flex-basis: 120px;      
+    text-align: right;   
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    flex-grow: 1;
+}
+
+form + form {
+    margin-top: 10px;   
+}
+/* Listings section */
+
+
+.listings-container {
+    flex: 1; /* takes remaining width of the page */
+}
+
+.listings-box {
+    flex: 1 1 auto;      
+    display: block;      
+}
+
+.listing-card {
+    background: #fff;
+    border: 2px solid #dcdcdc;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    margin-bottom: 2rem; /* space below card */
+}
+
+
+.rent-form {
+  display: flex;              /* Places boxes in a row */
+  gap: 20px;                  
+  align-items: center;  
+  font-size: 14;      
+}
+
+.rent-box {
+  display: flex;
+  align-items: center;     /* Keeps each label above its input */
+  gap: 5px;
+}
+
+input[type="number"] {
+        width: 70px; 
+        padding: 0.5px; 
+    }
+
+/*Shadow effect for listing boxes on listings page*/
+.hover-shadow:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3); 
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*text wrapping for listings when window is resized*/
+.card-header {
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+.card-header span {
+  white-space: nowrap;
+}
+
+/* listing_details.html */
+/* CSS for listing_details.html */
+
+.details_for_listings {
+    flex: 0 0 95%;  /* place filter box on the right side of page*/
+}
+
+.listing_picture {
+    flex: 0 0 5%;
+    margin-right: 20px; /* space between content and sidebar */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color:  rgb(200, 76, 76); 
+  border-radius: 30%;
+  padding: 12px;
+}
+
+#timeslots button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#book-a-listing {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3vw;         /* 5% of viewport width */
+    font-weight: bold;      
+    color: #222;          
+    margin-top: 1vw; 
+    margin-bottom: 20px;    
+}
+
+
+/* Toolbar background */
+#calendar .fc-toolbar {
+    background-color: rgb(200, 76, 76);
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Title */
+#calendar .fc-toolbar-title {
+    font-size: clamp(1rem, 3vw, 1.5rem);    /* clamp(min font size, preferred size, max font size) */
+}
+
+/* Buttons */
+#calendar .fc-button {
+    background-color: #fff;
+    color: rgb(87, 84, 84);
+    border: none;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#calendar .fc-button:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Day numbers */
+#calendar .fc-daygrid-day-number {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Today */
+#calendar .fc-day-today .fc-daygrid-day-number {
+    width: clamp(16px, 3vw, 20px);
+    height: clamp(16px, 3vw, 20px);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
+}
+
+/* Reduce the entire day cell height */
+#calendar .fc-daygrid-day {
+    padding: 1px;          /* reduce internal spacing */
+    height: 10px;          /* force cell height */
+    line-height: 1;        /* prevent extra spacing for text */
+}
+
+
+/* Hover over days */
+#calendar .fc-daygrid-day:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 900px;
+    font-size: 0.9rem;
+}
+
+#calendar .fc-col-header-cell-cushion,
+#calendar .fc-col-header-cell-cushion a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit;        
+    font-weight: bold;     
+}
+
+#calendar .fc-day-past {
+    background-color: #f5f5f5;  /* gray out past days */
+    color: #aaa;               
+    pointer-events: none;        /* make unclickable */
+}
+
+
+.headshot {
+    width: clamp(300px, 20vw, 350px);   
+    aspect-ratio: 1 / 1;               /* ensures perfect circle */
+    border-radius: 50%;                /* makes it circular */
+    object-fit: cover;         
+    display: block;                  
+    margin: 0 auto 1.2rem auto;        
+}
+
+.landlord-name {
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.landlord-description {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* listing details container on RHS of listings */
+.details-box {
+    flex: 1 1 100%;       
+    max-width: 600px;   
+    margin: 0 auto;       /* center on smaller screens */
+}
+
+/* Address */
+.address {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem); /* min 1.5rem, max 3rem */
+    margin-bottom: 1vw;
+}
+
+/* House info list */
+.house-info {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.house-info li {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Rent info */
+.rent {
+    font-size: clamp(1.2rem, 1.8vw, 2rem);
+    font-weight: bold;
+    margin-top: 2vw;
+}
+
+/* Two-column lists for utilities, services, etc. */
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem 1rem; /* row gap, column gap */
+    padding-left: 1.5rem; /* show bullets */
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 1.2rem);
+}
+
+/* About landlord and calendar section */
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.landlord-card {
+    background: #fff;
+    border: 2px solid #dcdcdc;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1; 
+}
+
+.calendar-card {
+    flex: 2.5;            /* calendar still larger but not overpowering */
+    min-width: 600px;     /* larger minimum for calendar */
+}
+
+.landlord-card,
+.calendar-card {
+    background: #fff;
+    border: 2px solid #dcdcdc;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+#calendar {
+    width: 100%;
+    min-height: 600px;
+}
+
+
+@media (max-width: 1000px) {
+    .booking-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .landlord-card,
+    .calendar-card {
+        width: 95%;
+        max-width: none;
+        min-width: 0;
+    }
+}
+
+
+
+/* Card inside the details box */
+.details-card {
+    background: #fff;
+    border: 2px solid #dcdcdc;
+    border-radius: 14px;
+    padding: 1.5rem 2rem;  /* enough for two-column layout */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    margin-bottom: 1rem;   /* spacing between sections if needed */
+}
+
+
+.details-card .address {
+    font-size: clamp(1.8rem, 3vw + 1rem, 3rem); /* min 1.8rem, scales with viewport, max 3rem */
+    margin-bottom: 1rem;
+    white-space: nowrap;      
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    color: #d64242;
+}
+
+/* Make house-info list items the same size as section headers */
+.details-card .house-info li {
+    font-size: clamp(1.2rem, 1.8vw, 2rem); /* match Utilities/Services headers */
+    margin: 0.5rem 0;
+}
+
+.details-box ul.two-columns li {
+    font-size: 1.2rem;   
+    line-height: 1.1;     /* reduce line height to keep same vertical space */
+    margin-bottom: 6px;   /* smaller spacing between items */
+}
+
+/* Make the row take full height */
+.row.align-items-center {
+    min-height: 500px; 
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    height: auto; /* let images control height */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.col-12.col-lg-8.d-flex {
+    align-items: center;
+}
+
+.col-12.col-lg-4.d-flex {
+    align-items: center;
+}
+
+.booking-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.booking-title {
+    font-size: clamp(2rem, 3vw + 1rem, 3rem);
+    font-weight: 700;
+    align-items: left;
+    color: #d64242;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin: 0 0 2rem 0; /* add bottom margin to create space below the header */
+}
+
+.spacer-top,
+.spacer-bottom {
+    flex: 1;
+    min-height: 20px;
+}
+
+/* Timeslot buttons */
+.timeslot-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #d64242; /* red color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.timeslot-btn:hover {
+    background-color: #b23636; /* slightly darker on hover */
+    transform: scale(1.05);
+}
+
+.timeslot-btn.selected {
+    border: 2px solid #ffffff; /* highlight selected */
+}
+
+/* Modal fade animation */
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+
+/* Landlord Chat: */
+.chat-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.chat-box {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.chat-box p {
+    margin: 5px 0;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #d64242;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* prifle top right styling */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.profile-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Login page improvements */
+.login-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.login-container {
+    width: 380px;
+    margin: 90px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #d9534f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #c9302c;
+}
+
+.login-page .header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.login-page main{
+    margin-top: 40 px;
+}
